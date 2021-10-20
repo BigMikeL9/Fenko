@@ -1,0 +1,107 @@
+////////////////////////////////////////////
+// LOGO
+.logo {
+  height: 3.25rem;
+}
+
+////////////////////////////////////////////
+// SEARCH
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    border-radius: 100rem;
+    padding: 0.7rem 2rem;
+    width: 90%;
+    transition: all 0.2s;
+
+    margin-right: -3.25rem; // this will let the button be on-top of the input search bar
+
+    &::placeholder {
+      color: var(--color-grey-light-4);
+    }
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+  }
+
+  // selects the sibling of the 'search__input' selector, when its focused (ie: ''search__button')
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light-2);
+
+    &:focus {
+      outline: none;
+    }
+
+    // &:active {
+    //   transform: translateY(2px);
+    // }
+
+    &-icon {
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-grey-dark-3);
+    }
+  }
+}
+
+////////////////////////////////////////////
+// USER NAVIGATION
+.user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bookmarks {
+    &-container {
+      //   position: relative;
+    }
+
+    &-icon {
+      height: 2.25rem;
+      width: 2.25rem;
+    }
+
+    &-amount {
+    }
+  }
+
+  &__notifications {
+    &-container {
+    }
+
+    &-icon {
+      height: 2.25rem;
+      width: 2.25rem;
+    }
+
+    &-amount {
+    }
+  }
+
+  &__info {
+    &-photo {
+      height: 3.25rem;
+      border-radius: 50%;
+    }
+
+    &-name {
+    }
+  }
+}

@@ -15,7 +15,47 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">Header Part</header>
+      <header class="header">
+        <img src="img/logo.png" alt="logo" class="logo" />
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search Hotels"
+          />
+          <button class="search__button">
+            <svg class="search__button-icon">
+              <use href="/img/sprites.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="user">
+          <div class="user__bookmarks-container">
+            <svg class="user__bookmarks-icon">
+              <use href="/img/sprites.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user__bookmarks-amount">7</span>
+          </div>
+
+          <div class="user__notifications-container">
+            <svg class="user__notifications-icon">
+              <use href="/img/sprites.svg#icon-chat"></use>
+            </svg>
+            <span class="user__notifications-amount">16</span>
+          </div>
+
+          <div class="user__info">
+            <img
+              src="img/user.jpg"
+              alt="Current User"
+              class="user__info-photo"
+            />
+            <span class=".user__info-name">Jonas</span>
+          </div>
+        </nav>
+      </header>
 
       <section class="content">
         <nav class="sidebar">Navigation</nav>
