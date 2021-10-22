@@ -2,6 +2,7 @@
 // LOGO
 .logo {
   height: 3.25rem;
+  margin: 0 2rem;
 }
 
 ////////////////////////////////////////////
@@ -65,43 +66,138 @@
 // USER NAVIGATION
 .user {
   display: flex;
-  justify-content: center;
   align-items: center;
+  align-self: stretch;
+
+  // selects all the DIRECT children of the '.user' class. ie: 'user__bookmarks-container', 'user__notifications-container', 'user__info'
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+  }
+
+  & > *:hover {
+    background-color: var(--color-grey-light-2);
+  }
 
   &__bookmarks {
     &-container {
-      //   position: relative;
+      position: relative;
     }
 
     &-icon {
-      height: 2.25rem;
-      width: 2.25rem;
+      height: 3rem;
+      width: 3rem;
+      fill: var(--color-grey-dark-2);
     }
 
     &-amount {
+      font-size: 1rem;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      color: var(---color-white);
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 1.5rem;
+      right: 1.2rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   &__notifications {
     &-container {
+      position: relative;
     }
 
     &-icon {
-      height: 2.25rem;
-      width: 2.25rem;
+      height: 3rem;
+      width: 3rem;
+      fill: var(--color-grey-dark-2);
     }
 
     &-amount {
+      font-size: 1rem;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      color: var(---color-white);
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 1.5rem;
+      right: 1.2rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
   &__info {
     &-photo {
-      height: 3.25rem;
+      height: 4rem;
       border-radius: 50%;
-    }
-
-    &-name {
+      margin-right: 1rem;
     }
   }
+}
+
+////////////////////////////////////////////
+// SIDE BAR
+
+.sidebar {
+  &__items {
+  }
+
+  &__item {
+    position: relative;
+    list-style: none;
+
+    // selects all BUT the last child of the 'sidebar__item' element
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-2);
+  text-align: center;
 }
