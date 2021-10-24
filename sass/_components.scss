@@ -243,7 +243,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(---color-white);
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--border-bottom);
 
   & > * {
     display: flex;
@@ -354,5 +354,87 @@
   100% {
     transform: scale(1);
     box-shadow: none;
+  }
+}
+
+////////////////////////////////////////////
+// PARAGRAPH
+
+.paragraph {
+  border-bottom: var(--border-bottom);
+
+  & :last-child {
+    padding: 2rem 0 3rem 0;
+  }
+}
+
+////////////////////////////////////////////
+// LIST
+
+.list {
+  padding: 3rem 0;
+  border-bottom: var(--border-bottom);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    flex: 0 0 50%; // '50%' inorder to have 2 elements side by side (100% / 2 = 50%)
+
+    list-style: none;
+    padding-bottom: 0.8rem;
+
+    &--icon {
+      height: 1.25rem;
+      width: 1.25rem;
+      fill: var(--color-primary);
+      margin-right: 1rem;
+    }
+
+    // 🟢 adding svg icon in CSS instead of in HTML.
+    // lets us see the background color through the 'svg' element (dont prefer this way tho)
+    // &::before {
+    //   content: "";
+    //   display: inline-block;
+    //   height: 1.25rem;
+    //   width: 1.25rem;
+    //   margin-right: 1rem;
+
+    //   background-color: var(--color-primary);
+    //   -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    //   -webkit-mask-size: cover;
+    // }
+  }
+}
+
+////////////////////////////////////////////
+// RECOMMENDATIONS
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  padding: 2.5rem 0;
+
+  &__text {
+  }
+
+  &__images {
+    display: flex;
+  }
+
+  &__image {
+    box-sizing: content-box;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: 4px solid var(---color-white);
+    margin-left: -1.5rem;
   }
 }
