@@ -24,9 +24,6 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
-  @media only screen and (max-width: 68.75em) {
-    html {
-      font-size: 50%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -47,11 +44,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
-  @media only screen and (max-width: 31.25em) {
-    .search {
-      order: 1;
-      flex: 0 0 100%;
-      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -175,34 +167,17 @@ body {
   z-index: 10;
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 56.25em) {
-    .sidebar__link:link, .sidebar__link:visited {
-      justify-content: center;
-      padding: 2rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .sidebar__link:link, .sidebar__link:visited {
-      flex-direction: column;
-      padding: 1.5rem 0.5rem; } }
 
 .sidebar__icon {
   height: 1.75rem;
   width: 1.75rem;
   margin-right: 2rem;
   fill: currentColor; }
-  @media only screen and (max-width: 37.5em) {
-    .sidebar__icon {
-      margin-right: 0;
-      margin-bottom: 0.7rem;
-      width: 1.5rem;
-      height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-dark-3);
   text-align: center; }
-  @media only screen and (max-width: 56.25em) {
-    .legal {
-      display: none; } }
 
 .gallery {
   display: flex; }
@@ -227,10 +202,6 @@ body {
     letter-spacing: 0.1rem;
     padding: 1.5rem 3rem;
     color: var(--color-grey-dark-2); }
-    @media only screen and (max-width: 37.5em) {
-      .overview__title {
-        font-size: 1.8rem;
-        padding: 1.25rem 2rem; } }
   .overview__stars-container {
     display: flex; }
   .overview__icon-star {
@@ -259,22 +230,13 @@ body {
     padding: 0 2.25rem;
     background-color: var(--color-primary);
     color: var(---color-white); }
-    @media only screen and (max-width: 37.5em) {
-      .overview__rating {
-        padding: 0 1.5rem; } }
     .overview__rating--average {
       font-size: 2.25rem;
       font-weight: 400;
       margin-bottom: -0.5rem; }
-      @media only screen and (max-width: 37.5em) {
-        .overview__rating--average {
-          font-size: 1.8rem; } }
     .overview__rating--count {
       font-size: 0.9rem;
       text-transform: uppercase; }
-      @media only screen and (max-width: 37.5em) {
-        .overview__rating--count {
-          font-size: 0.5rem; } }
 
 .button-inline {
   display: inline-block;
@@ -398,9 +360,6 @@ body {
   background-color: var(---color-white);
   border-top: var(--border-bottom);
   padding: 3.5rem 0; }
-  @media only screen and (max-width: 56.25em) {
-    .cta {
-      padding: 2.5rem 0; } }
   .cta__heading {
     font-size: 2rem;
     text-transform: uppercase;
